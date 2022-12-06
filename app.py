@@ -101,10 +101,10 @@ def order():
 
 def confirm_order():
     #smtp code
-   current_email = current_user.email
-   #Email lists you want to send email to
-   mailer_list=[current_email]
-
+    current_email = current_user.email
+    #Email lists you want to send email to
+    mailer_list=[current_email]
+    
     #Sender email
     sender_mail='yemi.kol26@gmail.com'
 
