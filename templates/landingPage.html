@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landingPage.css') }}">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="content">
+        <div class="welcomeText">
+          <div class="welcome">
+            <h1 class="greet">You want to place a order?</h1>
+          </div>
+          <div class="subText">
+            <div class="subTexts">
+              <p class="subscribe"><a href="{{ url_for('login') }}">Click Here</a></p>
+              <p class="soon">Something is intreasting</p>
+             </div>
+          </div>
+        </div>
+        
+        <div class="form">
+          <form action="" class="sub">
+            <input class='email' type="email">
+            <button class="button" value="Send">Subscribe</button>
+          </form>
+        </div>
+        
+        <div class="social">
+          <div class="follow">
+            <p class="followUs">Or follow us</p>
+          </div>
+          <div class="socialIcons">
+            <div class="socialIcon facebook brandico-facebook-rect"></div>
+            <div class="socialIcon  twitter brandico-twitter-bird"></div>
+            <div class="socialIcon  github brandico-github"></div>
+          </div>
+        </div>
+      </div>
+</body>
+<script>
+    window.addEventListener('load',function(){
+  var welcome = document.querySelector('.greet'),
+      subtext = document.querySelector('.subTexts'),
+      form    = document.querySelector('.sub'),
+      follow  = document.querySelector('.followUs'),
+      social  = document.querySelectorAll('.socialIcon'),
+      delay = 1000; 
+  
+  
+  setTimeout(function(){welcome.style.top='0';},delay);
+  setTimeout(function(){subtext.style.bottom = '0%';},delay*2);
+  setTimeout(function(){subtext.style.bottom = '-100%';},delay*4);
+  setTimeout(function(){form.style.opacity='1';},delay*5);
+  setTimeout(function(){follow.style.bottom='0%';},delay*6);
+  setTimeout(
+    function(){
+      social[0].style.marginTop='0px';
+      social[1].style.marginTop='0px';
+      social[2].style.marginTop='0px';
+    },delay*7
+  ); 
+   
+});
+  
+  
+
+
+</script>
+</html>

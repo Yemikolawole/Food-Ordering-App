@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodiiee</title>
+</head>
+<body>
+    
+    
+    
+    <div class="container">
+        
+    <header>
+        <nav id="navbar">
+            <div class="logo"><span><a href="{{ url_for('home') }}">Foodie</a></span></div>
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="{{ url_for('order') }}">Order</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        
+        </ul>
+        </nav>
+    <div id="mobile">
+        <div class="logo1"><span>Foodie</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="{{ url_for('order') }}">Order</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </div>
+    
+<div class="overlay">
+    <section id="home">
+        <h1 class="h-primary">Welcome to Foodie</h1>
+        <br>
+        <p>When you eat food with your family and friends, it always tastes better!</p>
+        <p>Whenever you see me seemingly thinking deep thoughts, I’m probably just thinking about food.</p>
+    </section>
+</div>
+    </header>
+
+       
+    
+            <div id="menu">
+                <div class="heading">
+                    <h1>Menu</h1>
+                    <h3>Today's Special</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Fried Chicken</h5>
+                            <h5 class="price"> $14 </h5>
+                        </div>
+                        <p>Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried</p>
+                    </div>
+                </div>
+        
+
+        
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Pizza</h5>
+                            <h5 class="price"> $8 </h5>
+                        </div>
+                        <p>Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta.</p>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1899&q=80" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Burger</h5>
+                            <h5 class="price"> $10 </h5>
+                        </div>
+                        <p>A hamburger, or simply burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.foodrepublic.com/wp-content/uploads/2017/05/hotdog-700x389.jpg" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Hotdog</h5>
+                            <h5 class="price"> $6 </h5>
+                        </div>
+                        <p>A hot dog (uncommonly spelled hotdog) is a food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://static.toiimg.com/thumb/91741738.cms?imgsize=78602&width=509&height=340" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Sandwich</h5>
+                            <h5 class="price"> $7 </h5>
+                        </div>
+                        <p>sandwich (plural sandwiches or sandwichs) A dish or foodstuff where at least one piece, but typically two or more pieces, of bread serve(s) as the wrapper or container of some other food</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="	https://www.thechunkychef.com/wp-content/uploads/2017/08/One-Pot-Chicken-Parmesan-Pasta-1-1.jpg" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Pasta</h5>
+                            <h5 class="price"> $8 </h5>
+                        </div>
+                        <p>Pasta is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs, and formed into sheets</p>
+                    </div>
+                </div>
+        
+
+                <button class="btn" style="margin:10px;"><a href="{{ url_for('order') }}" style="color:red;">Order Now</a></button>
+            </div>
+
+
+    <div id="about">
+        <h1 class="title">About us</h1>
+        <div class="about_row">
+            <div class="about_column">
+        <p>There are a lot of food words that are vague or general, like “delicious,” “yummy,” “succulent,” “delectable,” “mouth-watering,” or “finger-licking.” Avoid these overused phrases. Food writing shines when it’s specific to the food's particular flavor, texture, or smell, making it more evocative and precise. Rather than describing a soup as “tasty” </p>
+        <button id="btn1">learn more</button>
+    </div>
+    <div class="about_column">
+        <img src="https://img.freepik.com/free-photo/chef-making-ok-sign-white-background_1368-2804.jpg?w=2000
+        " alt="">
+    </div>
+</div>
+</div>
+
+    <footer>
+        <div>
+            &copy;copyright 2022
+            <p>
+        Designed by Friends-&-Company
+    </p>
+        </div>
+    </footer>
+</div>
+
+</body>
+<script>
+    var cartBtn = document.querySelector("#carttext")
+cartBtn.addEventListener("click", cartOpen)
+function cartOpen(){
+var cartArea =  document.querySelector("#cartside")
+cartArea.classList.add("cartactive")
+var closeBtn = document.querySelector("#closecart")
+closeBtn.style.display = "block"
+// document.body.style.overflow = "hidden"
+}
+var closeBtn = document.querySelector("#closecart")
+closeBtn.addEventListener("click", cartClose)
+function cartClose(){
+var cartArea =  document.querySelector("#cartside")
+cartArea.classList.remove("cartactive")
+closeBtn.style.display = "none"
+}
+
+
+
+var cardArr=JSON.parse(localStorage.getItem("cardArr"))||[];
+ console.log(cardArr)
+
+ function display(e){
+    document.querySelector("#addproduct").innerHTML=""
+      cardArr.map(function (e,index) {
+    var div1=document.createElement("div");
+    var no=document.createElement("h3");
+     no.innerText=index+1
+    
+     no.setAttribute("id", "no");
+      
+    var pa=document.createElement("h3");
+     pa.innerText=e.name;
+     pa.setAttribute("id", "name");
+
+     var div2 = document.createElement("div");
+      div2.setAttribute("class", "pricep");
+      
+     var div3 = document.createElement("div");
+    var gram=document.createElement("button");
+      gram.innerText=e.gross + e.unit;
+      gram.setAttribute("id", "gram");
+
+      var price=document.createElement("p");
+       price.innerText=e.cuurency+e.price;
+       price.setAttribute("id", "price");
+      
+     var div4 = document.createElement("div");
+      div4.setAttribute("id", "div4")
+      div4.append(no,pa)
+      var btu1= document.createElement("button");
+        btu1.setAttribute("id", "btu1");
+        btu1.addEventListener("click", function(){
+            dicre(index)
+        } )
+       
+      btu1.innerText="-"
+      var quant=document.createElement("p");
+      quant.innerText= e.quant;
+      quant.setAttribute("id", "qunty");
+       var btu2= document.createElement("button");
+       btu2.addEventListener("click", function(){
+        increse(index)
+    } )
+       btu2.innerText= "+"
+       btu2.setAttribute("id", "btu2");
+       
+    //    div3.append(gram,price);
+    //    div4.append(btu1,qunty,btu2);
+    var element = document.createElement('hr');
+        document.body.appendChild(element);
+       div2.append(gram,price,btu1,quant,btu2)
+       div1.append(div4,div2,element)
+       document.querySelector("#addproduct").append(div1);
+       console.log(e)
+        
+  });
+ }
+ 
+ function  increse(index){
+  if( cardArr[index].quant !=0){
+    cardArr[index].quant++
+ 
+localStorage.setItem("cardArr", JSON.stringify(cardArr));
+document.getElementById("stotal").innerText=total
+addE()
+addto()
+ }
+else if(cardArr[index].quant==0){
+  cardArr[index].quant++
+  localStorage.setItem("cardArr", JSON.stringify(cardArr));
+    document.getElementById("stotal").innerText=total
+    addE()
+   addto()
+  
+ }
+display(cardArr)
+}
+  function addto(){
+  var total=cardArr.reduce(function(acc,e ,index){
+ return acc+(e.price*e.quant)
+ display(cardArr)
+
+   },0);
+   document.getElementById("stotal").innerText=total
+   addE()
+display(cardArr)
+  }
+     function dicre(index){
+      if(cardArr[index].quant !=0){
+        cardArr[index].quant--
+        localStorage.setItem("cardArr", JSON.stringify(cardArr));
+        document.getElementById("stotal").innerText=total
+        addE()
+        subto()
+      }
+      else if(cardArr[index].quant==0){
+        cardArr[index].quant++
+        localStorage.setItem("cardArr", JSON.stringify(cardArr));
+      
+      document.getElementById("stotal").innerText=total
+      addE()
+      subto()
+       }
+        }
+        display(cardArr) 
+
+     function subto(){
+        var total=cardArr.reduce(function(acc,e ,index){
+       return acc+(e.price*e.quant)
+       display(cardArr)
+      
+         },0);
+         document.getElementById("stotal").innerText=total
+         addE()
+      display(cardArr)
+        }
+        var c=0;
+       function addE(){
+           
+           if(c==0){
+            document.getElementById("total").innerText= +(document.getElementById("stotal").innerHTML)+39
+       }
+        else if (+(total)>10) {
+            document.getElementById("total").innerText=+(document.getElementById("stotal").innerHTML)
+            c++
+        }
+         else if(+(total)<10){
+             c=0;
+             
+            document.getElementById("total").innerText=+(document.getElementById("stotal").innerHTML)
+         }
+        }
+        subto()
+  addto()
+  display(cardArr)  
+</script>
+</html>
